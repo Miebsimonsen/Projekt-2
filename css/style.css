@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F9F6F0;
+}
+
+img {
+    max-width: 50%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #E8B8C5;
+    padding: 50px 0;
+    font-size: 20px;
+    font-family: Georgia;
+
+    
+}
+
+.link {
+    text-decoration:none;
+    background-color: #E8B8C5;
+    color: #F9F6F0;
+    padding: 10px 20px; 
+}
+
+.overskrift {
+    text-align: center;
+    font-family: Georgia;
+    font-size: 50px;
+    padding: 50px 0;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-around; 
+    padding: 50px 0;
+}
+
+
+.main-content {
+    display: flex;
+    padding: 50px 0;
+    font-family: Georgia;
+    font-size: 20px;
+    justify-content: collumn;
+    img {
+        max-width: 100%;
+        height: auto;
+        align-self: center;
+    }
+
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 50px 0;
+
+}
+
+.img-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: collumn;
+    align-items:  space-evenly;
+    width: 20%;
+    margin-bottom: 20px;
+}
