@@ -1,12 +1,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #F9F6F0;
-}
-
-img {
-    max-width: 50%;
 }
 
 nav ul {
@@ -21,8 +16,6 @@ nav ul {
     padding: 50px 0;
     font-size: 20px;
     font-family: Georgia;
-
-    
 }
 
 .link {
@@ -32,7 +25,7 @@ nav ul {
     padding: 10px 20px; 
 }
 
-.overskrift {
+.title {
     text-align: center;
     font-family: Georgia;
     font-size: 50px;
@@ -43,22 +36,30 @@ nav ul {
     display: flex;
     justify-content: space-around; 
     padding: 50px 0;
+    img {
+        max-width: 50%;
+    }
 }
 
 
-.main-content {
+.body-img {
+    display: flex;
+    justify-content: space-around; 
+    align-self: center;
+    padding: 50px 0;
+    max-width: 50%;
+    }
+
+
+
+.body-text {
     display: flex;
     padding: 50px 0;
     font-family: Georgia;
     font-size: 20px;
-    justify-content: collumn;
-    img {
-        max-width: 100%;
-        height: auto;
-        align-self: center;
+    justify-content: center;
     }
 
-}
 
 .container {
     display: flex;
@@ -72,8 +73,19 @@ nav ul {
 .img-container {
     display: flex;
     gap: 1rem;
-    justify-content: collumn;
+    justify-content: column;
     align-items:  space-evenly;
     width: 20%;
     margin-bottom: 20px;
+}
+
+.anbefalinger {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 1rem;
+    width: 50%;
+    padding: 20px;
+    color: #F9F6F0;
+    border-radius: 10px;
 }
