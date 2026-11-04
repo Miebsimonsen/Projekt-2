@@ -10,7 +10,6 @@ p {
     font-family: "Open Sans";
     font-size: 1.25rem;
     padding: 0.5rem;
-    gap: 0.5rem;
     line-height: 1.5;
     color: #570016;
     margin: 2rem 6rem 2rem;
@@ -81,27 +80,18 @@ img {
 
 /*Header*/
 
-nav ul {
-    display: flex;
-    justify-content: space-evenly;
-}
-
 .menu {
     display: flex;
     align-items: center;
+    gap: 2rem;
     background-color: #E9A8BE;
-    text-decoration: none;
-    text-decoration-color: #570016;
     padding: 3rem;
     width: 100%;
     font-family: Georgia;
 }
 
 .menu a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
+    flex: 0 0 auto;
     background-color: #E9A8BE;
 }
 
@@ -110,21 +100,20 @@ nav ul {
 }
 
 .menu p {
-    width: 25%;
     margin: 0;
     padding: 0;
-    font-size: 1.25rem;
+    flex: 1;
+    font-size: 2.5rem;
     font-weight: bold;
     background-color: #E9A8BE;
 }
 
 .menu input {
-    width: 25%;
+    width: 15%;
     padding: 0.5rem;
     border-radius: 1rem;
     border: 2px solid transparent;
     background-color: #F8F5EF;
-    text-align: center;
 }
 
 .menu input::placeholder {
@@ -149,8 +138,9 @@ nav ul {
  main {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
  }
+
  .hero-billede {
     width: 100%;
     border: 1rem solid #570016;
@@ -158,11 +148,6 @@ nav ul {
  }
 
  .hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
     margin: 2rem 4rem 4rem;
     padding: 2rem;
     font-family: Georgia;
@@ -174,13 +159,14 @@ nav ul {
     padding: 1rem;
  }
  
+ .blog-billeder {
+     display: flex;
+ }
+
  .blog-kort {
-    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     margin: 2rem 0 2rem;
-    object-fit: cover;
     max-width: 50%;
 }
 
@@ -193,14 +179,7 @@ nav ul {
 
 .blog-kort p {
     margin: 0 6rem 1rem;
-    justify-content: center;
     text-align: center;
-
-}
-.blog-billeder {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
 }
 
 .blog-kort, .blog-kort p, .blog-kort h3, .blog-billeder {
@@ -210,7 +189,6 @@ nav ul {
 
 .om-mig {
     display: flex;
-    justify-content: flex-start;
     align-items: center;
     gap: 1rem;
     background-color: #A7C4E3;
@@ -219,21 +197,15 @@ nav ul {
     border-radius: 4rem;
 }
 
-.om-mig-tekst{
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    background-color: #A7C4E3;
-    justify-content: flex-start;
-}
-
 .om-mig h4, .om-mig p {
     background-color: #A7C4E3;
 }
 
+.om-mig p {
+    flex: 1;
+}
+
 .portræt {
-    justify-content: center;
-    align-items: center;
     text-align: left;
     padding: 3rem;
     background-color: #A7C4E3;
@@ -261,8 +233,6 @@ nav ul {
     justify-content: center;
     align-items: center;
     margin: 0 8rem 0;
-    text-align: center;
-    line-height: 1.5;
 }
 
 .blog img{
@@ -273,78 +243,77 @@ nav ul {
 .blog-tekst {
     display: flex;
     flex-direction: column;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
+}
+
+.blog-tekst .knap {
+    align-self: center;
+    margin-bottom: 3rem;
 }
 
 
 /*Blogindlæg - Anbefalinger*/
 
-.help-kort {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.anbefalinger {
+    text-align: center;
+}
+
+.anbefalinger h1 {
+    margin-bottom: 2rem;
+    padding-bottom: 0;
+}
+
+.anbefalinger p {
+    margin: 0 0 0;
+    padding: 0;
+}
+
+.recommendations-kort, .help-kort {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     padding: 2rem;
-    object-fit: cover;
-}
-
-.recommendations-kort {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    object-fit: cover;
-}
-
-.help-img, .recommendations-img {
-    display: flex;
-    object-fit: contain;
-}
-
-.billeder, .billeder-2 {
-    display: flex;
-    justify-content: center;
     gap: 2rem;
+    margin: 2rem 4rem 2rem;
 }
 
-.video {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    margin: 2rem 0 2rem;
-    width: 50%;
+.recommendations-kort img, .help-kort img {
+    border-radius: 1rem;
+    border: 0.5rem solid #570016;
 }
 
+.recommendations-kort p, .help-kort p {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    padding: 0.5rem;
+}
 
 /*Kontakt*/
 
 .info {
     display: flex;
     flex-direction: column;
-    justify-content: left;
-    align-items: left;
+    align-items: flex-start;
+    min-width: 100%;
     padding: 1rem;
-    margin: 2rem 0 2rem;
+    margin: 1rem 0 1rem;
     text-align: left;
     background-color: #E9A8BE;
     border-radius: 3rem;
 }
 
-.info h2, .info p {
+.info h2 {
+    text-align: left;
     background-color: #E9A8BE;
 }
 
-
-.kontakt {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 2rem 0 2rem;
-    text-align: center;
+.info p {
+    margin: 0;
+    padding: 0.2rem;
+    background-color: #E9A8BE;
 }
+
 
 .besked {
     display: flex;
@@ -354,6 +323,7 @@ nav ul {
     gap: 1rem;
     margin: 5rem 2rem 5rem;
     padding: 2rem;
+    width: 100%;
     text-align: left;
 }
 
@@ -375,34 +345,26 @@ footer a {
     background-color: #E9A8BE;
 }
 
-.footer-1 {
-    display: flex;
-    flex-direction: column;
-}
-
-.footer-2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.75rem;
-    margin-left: auto;
-}
-
 footer p {
     margin: 0;
     padding: 0.5rem;
     font-size: 1.5rem;
 }
 
+.footer-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
 .instagram{
     width: 4rem;
     height: 4rem;
-    object-fit: contain;
 }
 .facebook {
     width: 5rem;
     height: 5rem;
-    object-fit: contain;
 }
 
 .instagram:hover, .facebook:hover{
@@ -412,11 +374,13 @@ footer p {
 
 /* Desktop version */
 
-@media screen and (min-width:769px ){
+@media screen and (max-width:769px ){
     header {
-        flex-direction: row;
         justify-content: space-between;
         align-items: center; 
+    }
+    footer {
+       
     }
 
     .overskrift {
