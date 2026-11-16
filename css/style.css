@@ -122,12 +122,17 @@ header nav p {
 }
 
 header nav ul {
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
     list-style-type: none;
   }
+
+header nav .search-item {
+    flex: 0 0 12rem;
+}
 
 header nav a {
     padding: 0.5em;
@@ -142,8 +147,7 @@ header nav a:hover {
 }
 
 header nav input[type="search"] {
-    width: 20%;
-    margin-left: 1.5rem;
+    width: 100%;
     padding: 0.8rem;
     border-radius: 1.5rem;
     border: 5px solid #570016;
@@ -518,28 +522,35 @@ footer p {
 @media screen and (max-width:769px ){
 
     header nav {
-        min-height: 10rem;
-        padding: 1rem;
+        height: auto;
+        min-height: 5rem;
+        padding: 0.75rem 1rem;
+        align-items: center;
     }
 
     header nav #bars {
       display: flex;
       margin-left: auto;
+      padding: 0;
       border: none;
       background-color: transparent;
-      font-size: 2.3em;
+      font-size: 1.8rem;
       color: #570016;
     }
 
     header nav ul {
+      flex: none;
       display: none;
       height: auto;
       border-top: 4px solid #E9A8BE;
       flex-direction: column;
+      align-items: center;
+      gap: 0.25rem;
     }
 
     header nav ul li {
       display: flex;
+      width: 100%;
     }
     
     header nav .show {
@@ -547,8 +558,7 @@ footer p {
       position: absolute;
       top: 100%;
       left: 0;
-      padding: 0;
-      padding-bottom: 1rem;
+      padding: 0.75rem 1rem 1rem;
       background-color: #570016;
       width: 100%;
       z-index: 1;
@@ -556,19 +566,29 @@ footer p {
 
     header nav .show a {
       color: #E9A8BE;
+      width: 100%;
+      text-align: center;
     }
 
     header nav p {
-        font-size: 1.8rem;
+        font-size: 1.25rem;
+        line-height: 1.2;
         margin: 0;
         padding: 0;
     }
 
+    header nav .search-item {
+        flex: none;
+        width: 70%;
+        max-width: 16rem;
+        padding: 0.5rem;
+    }
+
     header nav input[type="search"] {
-        width: 25%;
-        margin-left: 0.75rem;
+        width: 100%;
+        margin: 0;
         padding: 0.6rem;
-        font-size: 1.5rem;
+        font-size: 1rem;
         border-radius: 2rem;
         text-align: center;
     }
@@ -631,6 +651,11 @@ footer p {
         font-size: 2.5rem;
     }
 
+    main h1 {
+        font-size: 2rem;
+        margin: 1rem 0;
+    }
+
     .blog-tekst {
         margin: 0;
     }
@@ -680,8 +705,20 @@ footer p {
         margin: 0 2rem 0;
     }
 
-    .info, .kontakt {
+    .info {
         width: 80%;
+    }
+
+    .kontakt {
+        width: 94%;
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+
+    .kontakt h2 {
+        width: 100%;
+        font-size: 1.5rem;
+        padding: 0.5rem 0;
     }
 
     .info {
