@@ -515,7 +515,7 @@ footer p {
 
     header nav {
         height: auto;
-        min-height: 6rem;
+        min-height: 10rem;
         padding: 0.75rem 1rem;
         align-items: center;
     }
@@ -526,7 +526,7 @@ footer p {
       padding: 0;
       border: none;
       background-color: transparent;
-      font-size: 1.8rem;
+      font-size: 2rem;
       color: #570016;
     }
 
@@ -620,7 +620,7 @@ footer p {
 
     .blog-billeder {
         flex-direction: column;
-        gap: 0.25rem;
+        gap: 0.5rem;
         padding: 0 1rem 1rem;
     }
 
@@ -651,7 +651,7 @@ footer p {
         width: 100%;
     }
 
-    h1, h2, h3, h4 {
+    main h1, main h2, main h3, main h4 {
         font-size: 2.5rem;
     }
 
@@ -668,7 +668,7 @@ footer p {
     }
 
     .blog-tekst p {
-        margin: 1rem;
+        margin: 0.5rem;
     }
 
     .blog-tekst .kilder {
