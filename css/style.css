@@ -657,7 +657,7 @@ footer p {
         margin: 0;
     }
 
-    .billede-sol img {
+    .billede-sol img, .blog-tekst img {
         max-width: 80%;
     }
 
