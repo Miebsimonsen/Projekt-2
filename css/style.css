@@ -571,7 +571,7 @@ footer p {
     }
 
     header nav p {
-        font-size: 1.25rem;
+        font-size: 1.4rem;
         line-height: 1.2;
         margin: 0;
         padding: 0;
@@ -599,7 +599,8 @@ footer p {
     }
 
     .hero-billede {
-        margin: 1rem 0;
+        margin: 0;
+        border: 0.5rem solid #570016;
     }
 
     .hero-billede img {
@@ -688,16 +689,12 @@ footer p {
         margin: 0;
     }
 
-    .billede-sol img {
-        max-width: 80%;
-    }
-
-    .billede-mental img {
-        width: 80%;
+    .billede-sol img, .billede-mental img {
+        width: 100%;
     }
 
     .recommendations-kort, .help-kort {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(1, minmax(0, 1fr));
     margin: 0 1rem 0;
     }
 
@@ -706,11 +703,11 @@ footer p {
     }
 
     .info {
-        width: 80%;
+        width: 95%;
     }
 
     .kontakt {
-        width: 94%;
+        width: 95%;
         padding: 1rem;
         font-size: 1.1rem;
     }
