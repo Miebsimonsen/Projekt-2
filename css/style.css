@@ -592,7 +592,7 @@ footer p {
 
     .hero-billede {
         width: 100%;
-        margin: 0 0 1rem;
+        margin: 0 0 2rem;
         border: 0.5rem solid #570016;
     }
 
@@ -673,6 +673,7 @@ footer p {
 
     .blog-tekst p {
         margin: 0.5rem;
+        line-height: 2;
     }
 
     .blog-tekst .kilder {
