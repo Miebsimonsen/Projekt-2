@@ -343,6 +343,12 @@ header nav input[type="search"]:focus {
     justify-content: center;
 }
 
+.billede-mental {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 .billede-sol img {
     max-width: 50%;
     border: 0.5rem solid #570016;
@@ -657,8 +663,12 @@ footer p {
         margin: 0;
     }
 
-    .billede-sol img, .blog-tekst img {
+    .billede-sol img {
         max-width: 80%;
+    }
+
+    .billede-mental img {
+        width: 80%;
     }
 
     .recommendations-kort, .help-kort {
