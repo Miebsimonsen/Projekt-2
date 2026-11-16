@@ -286,9 +286,13 @@ header nav input[type="search"]:focus {
 
 /* Blogindlæg - Hvad er mental sundhed?*/
 
-.blog-tekst h1, .blog-tekst h2 {
+.blog-tekst h1 {
     margin: 3rem 0;
 }
+.blog-tekst h2 {
+    margin: 1rem 0;
+}
+
 
 .blog-tekst img{
     width: 60%;
