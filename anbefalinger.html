@@ -5,19 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anbefalinger</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <script src="https://kit.fontawesome.com/1a99d09853.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
-        <nav class="menu">
-            <p>Du er ikke alene ❤️‍🩹</p>
-         </nav> 
-         
-         <nav class="menu">
-            <a href="index.html">Forside</a>
-            <a href="blogindlæg.html">Blogindlæg</a>
-            <a href="kontakt.html">Kontakt</a>
-            <input type="search" placeholder=" 🔍    Søg">
+        <nav>
+            <p>
+                Du er ikke alene <span aria-hidden="true">❤️‍🩹</span>
+            </p>
+        
+            <button
+            id="bars"
+            aria-expanded="false"
+            aria-controls="menu"
+            aria-label="Åbn navigation">
+            <i class="fa-solid fa-bars"></i>
+            </button>
+    
+            <ul id="menu">
+                <li><a href="index.html">Forside</a></li>
+                <li><a href="blogindlæg.html">Blogindlæg</a></li>
+                <li><a class="active" href="anbefalinger.html" aria-current="page">Anbefalinger</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>  
+            </ul>
+            <label class="screen-reader-text" for="search">Søg</label>
+            <input id="search" type="search" placeholder=" 🔍  Søg">
         </nav>
     </header>
 
@@ -29,106 +43,115 @@
         </p>   
     </section>
         
-     <section>
-        <div class="recommendations-kort">
-            <div class="a1">
-                <a href="https://politikensforlag.dk/produkter/lev-mere-taenk-mindre-9788740039061/"> <img src="IMG/lev mere.png" alt="Link til bogen Lev mere tænk mindre"></a>
+     
+    <div class="recommendations-kort">
+        <nav class="a1">
+            <a href="https://politikensforlag.dk/produkter/lev-mere-taenk-mindre-9788740039061/" target="_blank">
+                <img src="IMG/lev-mere.png" alt="Link til bogen Lev mere tænk mindre">
             <p>
                 Lev mere tænk mindre af Pia Callesen
             </p>
-            </div>
+            </a>
+        </nav>
             
-            <div class="a2">
-                 <a href="https://open.spotify.com/show/27uKGhKIL1bp63eTFCaQjm"> <img src="IMG/Hjernero.png" alt="Link til podcasten HjerneRO"></a>
+        <nav class="a2">
+            <a href="https://open.spotify.com/show/27uKGhKIL1bp63eTFCaQjm" target="_blank">
+                <img src="IMG/hjernero.png" alt="Link til podcasten HjerneRO">
             <p>
                 Podcasten HjerneRO af psykologerne Mads & Martin
             </p>
-            </div>
+            </a>
+        </nav>    
 
-            <div class="a3">
-                <a href="https://open.spotify.com/show/15oq5yztN1NwZjQn4HIMLg"><img src="IMG/girltalk.png" alt="Link til podcasten Girl Talk"></a>
+        <nav class="a3">
+            <a href="https://open.spotify.com/show/15oq5yztN1NwZjQn4HIMLg" target="_blank">
+                <img src="IMG/girltalk.png" alt="Link til podcasten Girl Talk">
             <p>
                 GirlTalks podcast med værten Mathilde Graulund
             </p>
-            </div>
+            </a>
+        </nav>
 
-            <div class="a4">
-                <a href="https://www.dr.dk/drtv/serie/indefra-med-anders-agger-_-syg-ungdom_597702"> <img src="IMG/anders agger.png" alt="Link til indefra med Anders Agger - Syg ungdom"></a>
-                <p>Indefra med Anders Agger - Syg Ungdom</p>
-            </div>
-        </div>
-    </section>
-
-     <section>
-        <div class="hjælp">
-            <h2>Hvor kan man finde hjælp?</h2>
+        <nav class="a4">
+            <a href="https://www.dr.dk/drtv/serie/indefra-med-anders-agger-_-syg-ungdom_597702" target="_blank">
+                <img src="IMG/anders-agger.png" alt="Link til indefra med Anders Agger - Syg ungdom">
             <p>
-                Der findes flere forskellige organisationer og steder man kan få hjælp. Jeg har udvalgt et par steder du kan starte med at finde hjælp; 
+                Indefra med Anders Agger - Syg Ungdom
             </p>
-        </div>
-    </section>
+            </a>
+        </nav>
+    </div>
 
-     <section>
-        <div class="help-kort">
-            <div class="b1">
-                <a href="https://psykiatrifonden.dk/om-os"><img src="IMG/Psykiatrifonden.png" alt="Link til Psykiatrifonden"></a>
-                <p>
-                    Psykiatrifonden kæmper for alle der er rørt af psykiske sygdomme, for at disse mødes med forståelse og får hjælp og rådgivning.
-                </p>
-            </div>
+    <div class="hjælp">
+        <h2>Hvor kan man finde hjælp?</h2>
+        <p>
+            Der findes flere forskellige organisationer og steder man kan få hjælp. Jeg har udvalgt et par steder du kan starte med at finde hjælp; 
+        </p>
+    </div>
+    
+    <div class="help-kort">
+        <nav class="b1">
+            <a href="https://psykiatrifonden.dk/om-os" target="_blank">
+                <img src="IMG/psykiatrifonden.png" alt="Link til Psykiatrifonden">
+            <p>
+                Psykiatrifonden kæmper for alle der er rørt af psykiske sygdomme, for at disse mødes med forståelse og får hjælp og rådgivning.
+            </p>
+            </a>
+        </nav>
 
-            <div class="b2">
-                <a href="https://bornetelefonen.dk"><img src="IMG/Børns vilkår.png" alt="Link til Børnetelefonen"></a>
-                <p>
-                    Børnetelefonen rådgiver unge mellem 15 og 24 år. Børnetelefonens telefon - og chat-linje er døgnåbent.
-                </p>
-            </div>
+        <nav class="b2">
+            <a href="https://bornetelefonen.dk" target="_blank">
+                <img src="IMG/børns-vilkår.png" alt="Link til Børnetelefonen">
+            <p>
+                Børnetelefonen rådgiver unge mellem 15 og 24 år. Børnetelefonens telefon - og chat-linje er døgnåbent.
+            </p>
+            </a>
+        </nav>
 
-            <div class="b3">
-                <a href="https://headspace.dk"><img src="IMG/headspace.png"  alt="Link til Headspace"></a>
-                <p>
-                    Headspace er et samtaletilbud hvor alle unge er velkomne. Headspace arbejder på de unges præmisser, så man kan trygt dele alt man har behov for.
-                </p>
-            </div>
+        <nav class="b3">
+            <a href="https://headspace.dk" target="_blank">
+                <img src="IMG/headspace.png"  alt="Link til Headspace">
+            <p>
+                Headspace er et samtaletilbud hvor alle unge er velkomne. Headspace arbejder på de unges præmisser, så man kan trygt dele alt man har behov for.
+            </p>
+            </a>
+        </nav>
 
-            <div class="b4">
-                <a href="https://www.sundhed.dk/sundhedsfaglig/information-til-praksis/syddanmark/almen-praksis/patientbehandling/patientforloeb/visitation/henv-18-24-aar-vederlagsfri-psykologbeh/"><img src="IMG/Psykologhjælp.png" alt="Link til psykologhjælp"></a>
-                <p>
-                    Der tilbydes gratis psykologhjælp til unge mellem 18 og 24 år til behandling af let til moderat angst og depression.
-                </p>
-            </div>
-        </div> 
-    </section>
+        <nav class="b4">
+            <a href="https://www.sundhed.dk/sundhedsfaglig/information-til-praksis/syddanmark/almen-praksis/patientbehandling/patientforloeb/visitation/henv-18-24-aar-vederlagsfri-psykologbeh/" target="_blank">
+                <img src="IMG/psykologhjælp.png" alt="Link til psykologhjælp">
+            <p>
+                Der tilbydes gratis psykologhjælp til unge mellem 18 og 24 år til behandling af let til moderat angst og depression.
+            </p>
+            </a>
+        </nav>
+    </div>
     </main>
 
    <footer>
-        <section>
-            <div class="footer-1">
-                <div class="logo">
-                    <p>
-                        Du er ikke alene ❤️‍🩹
-                    </p> 
-                </div>
+        <div class="footer-1">
+            <div class="logo">
                 <p>
-                    👤 Mie Breindahl Simonsen
-                </p>
-                <p>
-                    💌 kontakt@duerikkealene.dk
-                </p>
+                    Du er ikke alene <span aria-hidden="true">❤️‍🩹</span>
+                </p> 
             </div>
-        </section>
+            <p>
+                👤 Mie Breindahl Simonsen
+            </p>
+            <p>
+                💌 kontakt@duerikkealene.dk
+            </p>
+        </div>
+            
+        <div class="footer-2">
+            <nav class="instagram">
+                <a href="https://www.instagram.com" target="_blank"><img src="IMG/instagram.png" alt="Link til Instagram"></a>
+            </nav>
 
-        <section>
-            <div class="footer-2">
-                <div class="instagram">
-                    <a href="https://www.instagram.com"><img src="IMG/instagram.png" alt="Link til Instagram"></a>
-                </div>
-
-                <div class="facebook">
-                    <a href="https://www.facebook.com"><img src="IMG/facebook.png" alt="Link til Facebook"></a>
-                </div>
-            </div>
-        </section>
+            <nav class="facebook">
+                <a href="https://www.facebook.com" target="_blank"><img src="IMG/facebook.png" alt="Link til Facebook"></a>
+            </nav>
+        </div>
     </footer>
 </body>
 </html>

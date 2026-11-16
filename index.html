@@ -5,32 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Du er ikke alene</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <script src="https://kit.fontawesome.com/1a99d09853.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
-        <nav class="menu">
-            <p>Du er ikke alene ❤️‍🩹</p>
-         </nav> 
-         
-         <nav class="menu">
-            <a href="index.html">Forside</a>
-            <a href="blogindlæg.html">Blogindlæg</a>
-            <a href="kontakt.html">Kontakt</a>
-            <input type="search" placeholder=" 🔍    Søg">
+        <nav>
+            <p>
+                Du er ikke alene <span aria-hidden="true">❤️‍🩹</span>
+            </p>
+        
+            <button
+            id="bars"
+            aria-expanded="false"
+            aria-controls="menu"
+            aria-label="Åbn navigation">
+            <i class="fa-solid fa-bars"></i>
+            </button>
+    
+            <ul id="menu">
+                <li><a class="active" href="index.html" aria-current="page">Forside</a></li>
+                <li><a href="blogindlæg.html">Blogindlæg</a></li>
+                <li><a href="anbefalinger.html">Anbefalinger</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>  
+            </ul>
+            <label class="screen-reader-text" for="search">Søg</label>
+            <input id="search" type="search" placeholder=" 🔍  Søg">
         </nav>
     </header>
+
+    <a href="#hovedindhold" class="screen-reader-text">Hop ned til hovedindhold</a>
     
-    <main>
-        <div class="hero-billede">
-            <img src="IMG/sommerfugle.png" alt="Billede af Lyserøde sommerfugle">
-        </div>
-    
+    <main id="hovedindhold">
         <section class="hero">
             <h1>Velkommen til min blog!</h1>
-            <p> 
-                Denne side er til dig der kæmper med mentale udfordringer, er pårørende eller nysgerrig. Jeg har samlet alt der har hjulpet mig igennem tiden, som jeg håber du også kan få glæde af. Mest af alt handler denne side om at vide at man ikke er alene - at der er mange andre der har det på præcis samme måde som en selv, vi er bare virkelig dårlige til at snakke om det. Lad dette være min håndsrækning til dig der har det svært. Udviklingen fra larve til sommerfugl symboliserer, at udvikling tager tid, men at det er værd at kæmpe for.
+
+            <div class="hero-billede">
+                <img src="IMG/sommerfugle.png" alt="Billede af Lyserøde sommerfugle">
+            </div>
+
+            <p>
+                Du er ikke alene. Mange andre står i den samme situation som du gør lige nu, men vi tør bare ikke at tale om det.
             </p>
+
+            <p>
+                Her har jeg samlet alt det, der har hjulpet mig igennem sværre tider. Jeg håber også at du kan få glæde af det!
+            </p>
+
+            <p>
+                Siden er til dig, der kæmper med mentale udfordringer, er pårørende eller bare nysgerrig på emnet. 
+            </p>
+
+            <p>
+                Udviklingen fra larve til sommerfugl, minder os om at forandringer tager tid, men det er værd at kæmpe for.
+            </p>
+
+            <p>
+                Står du og har akut brug for hjælp så tag fat i en af følgende.
+            </p>
+                 
+            <div class="akut">
+                <p>
+                    Ved akut-hjælp ring 1-1-2
+                </p>
+            </div>
+            
+            <div class="hero-knapper">
+                <nav class="knap">
+                    <a href="https://www.livslinien.dk" target="_blank">Kontakt Livslinjen</a>
+                </nav>
+                <nav class="knap">
+                    <a href="https://psykiatrifonden.dk/hjaelp-raadgivning" target="_blank">Kontakt Psykiatrifonden</a>
+                </nav>
+            </div>
+
         </section> 
 
         <section>
@@ -40,14 +89,14 @@
             
             <div class="blog-billeder">  
                 <div class="blog-kort">
-                <img src="IMG/mental.png" alt="Billede af Mental Health Matters">
+                <img src="IMG/mental-health-matters-lille.png" alt="Billede af Mental Health Matters">
                 <h3>Hvad er mental sundhed?</h3>
                 <p>
                     Dette blogindlæg handler om hvad mental sundhed egentlig er og om hvordan kommer man igennem de svære perioder.
                 </p>
-                <button class="knap">
-                    <a href="blogindlæg.html">Læs indlægget →</a>
-                </button>
+                <nav class="knap">
+                    <a href="blogindlæg.html">Læs blogindlægget →</a>
+                </nav>
                 </div>
 
                 <div class="blog-kort">
@@ -56,56 +105,48 @@
                 <p>
                     Dette blogindlæg handler om hvilke bøger, podcast og dokumentarer som jeg selv har haft meget glæde af. 
                 </p>
-                <button class="knap">
-                    <a href="anbefalinger.html">Læs indlægget →</a>
-                </button>        
+                <nav class="knap">
+                    <a href="anbefalinger.html">Se mine anbefalinger →</a>
+                </nav>     
                 </div>
             </div>
-
         </section> 
 
         <section class="om-mig">
-            <div class="portræt">
-               <img src="IMG/portrætbillede.png" alt="Billede af mig">
-            </div>
-            <div>
+            <img src="IMG/portrætbillede.png" alt="Billede af mig">
+            <div class="om-mig-tekst">
                 <h4>Lær mig bedre at kende!</h4> 
                 <p>
                     Jeg hedder Mie og er 25 år gammel. Jeg har selv haft psykiske udfordringer i størstedelen af mit liv. Jeg har lavet denne blog for at samle alle informationer og hjælp som jeg selv har manglet, da jeg havde store mentale udfordringer. De går ikke nødvendigvis væk, men man kan lære at håndtere svære udfordinger. Og vigtigst af alt skal du huske at det hele nok skal gå. 
                 </p> 
             </div>
-        </section>
-           
+        </section>   
     </main>
 
     <footer>
-        <section>
-            <div class="footer-1">
-                <div class="logo">
-                    <p>
-                        Du er ikke alene ❤️‍🩹
-                    </p> 
-                </div>
+        <div class="footer-1">
+            <div class="logo">
                 <p>
-                    👤 Mie Breindahl Simonsen
-                </p>
-                <p>
-                    💌 kontakt@duerikkealene.dk
-                </p>
+                    Du er ikke alene <span aria-hidden="true">❤️‍🩹</span>
+                </p> 
             </div>
-        </section>
-        
-        <section>
-            <div class="footer-2">
-                <div class="instagram">
-                    <a href="https://www.instagram.com"><img src="IMG/instagram.png" alt="Link til Instagram"></a>
-                </div>
+            <p>
+                👤 Mie Breindahl Simonsen
+            </p>
+            <p>
+                💌 kontakt@duerikkealene.dk
+            </p>
+        </div>
+            
+        <div class="footer-2">
+            <nav class="instagram">
+                <a href="https://www.instagram.com" target="_blank"><img src="IMG/instagram.png" alt="Link til Instagram"></a>
+            </nav>
 
-                <div class="facebook">
-                    <a href="https://www.facebook.com"><img src="IMG/facebook.png" alt="Link til Facebook"></a>
-                </div>
-            </div>
-        </section>
+            <nav class="facebook">
+                <a href="https://www.facebook.com" target="_blank"><img src="IMG/facebook.png" alt="Link til Facebook"></a>
+            </nav>
+        </div>
     </footer>
 </body>
 </html>

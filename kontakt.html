@@ -5,73 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <script src="https://kit.fontawesome.com/1a99d09853.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
-        <nav class="menu">
-            <p>Du er ikke alene ❤️‍🩹</p>
-         </nav> 
-         
-         <nav class="menu">
-            <a href="index.html">Forside</a>
-            <a href="blogindlæg.html">Blogindlæg</a>
-            <a href="kontakt.html">Kontakt</a>
-            <input type="search" placeholder=" 🔍    Søg">
+        <nav>
+            <p>
+                Du er ikke alene <span aria-hidden="true">❤️‍🩹</span>
+            </p>
+        
+            <button
+            id="bars"
+            aria-expanded="false"
+            aria-controls="menu"
+            aria-label="Åbn navigation">
+            <i class="fa-solid fa-bars"></i>
+            </button>
+    
+            <ul id="menu">
+                <li><a href="index.html">Forside</a></li>
+                <li><a href="blogindlæg.html">Blogindlæg</a></li>
+                <li><a href="anbefalinger.html">Anbefalinger</a></li>
+                <li><a class="active" href="kontakt.html" aria-current="page">Kontakt</a></li>
+            </ul>
+
+            <label class="screen-reader-text" for="search">Søg</label>
+            <input id="search" type="search" placeholder=" 🔍  Søg">
         </nav>
     </header>
 
     <main>
         <section>
             <h1>Har du noget på hjertet?</h1>
+    
             <div class="info">
-                <h2>Skriv til mig</h2>
                 <p>Brug formularen herunder til at sende et spørgsmål eller brug informationerne under</p>
-                <p> Mail: kontakt@duerikkealene.dk</p>   
+                <p>Mail: kontakt@duerikkealene.dk</p>   
                 <p>Instagram: @duerikkealene</p>
                 <p>Facebook: Du er ikke alene</p>
             </div>
-                
-            <div class="besked">
-                <h3>Skriv en besked 💌</h3>
-                <input type="search" placeholder="Navn" required>
-                <input type="search" placeholder="Mail" required>
-                <input type="search" placeholder="Skriv beskeden her..." required>
-                <button class="knap">
-                    <a href="#">Send besked ➢</a>
-                </button>  
-            </div>   
         </section>
+        
+        <form class="kontakt"> 
+            <h2>Skriv en besked 💌</h2>
+            <label for="navn">Navn</label>
+            <input id="navn" type="text" required>
+
+            <label for="mail">E-mail</label>
+            <input id="mail" type="email" required>
+
+            <label for="besked">Skriv beskeden her</label>
+            <textarea id="besked" cols="30" rows="10"></textarea>
+
+            <input type="submit" name="submit" value="Send besked">
+
+        </form>
     </main>
 
    <footer>
-        <section>
-            <div class="footer-1">
-                <div class="logo">
-                    <p>
-                        Du er ikke alene ❤️‍🩹
-                    </p> 
-                </div>
+        <div class="footer-1">
+            <div class="logo">
                 <p>
-                    👤 Mie Breindahl Simonsen
-                </p>
-                <p>
-                    💌 kontakt@duerikkealene.dk
-                </p>
+                    Du er ikke alene <span aria-hidden="true">❤️‍🩹</span>
+                </p> 
             </div>
-        </section>
+            <p>
+                👤 Mie Breindahl Simonsen
+            </p>
+            <p>
+                💌 kontakt@duerikkealene.dk
+            </p>
+        </div>
+            
+        <div class="footer-2">
+            <nav class="instagram">
+                <a href="https://www.instagram.com" target="_blank"><img src="IMG/instagram.png" alt="Link til Instagram"></a>
+            </nav>
 
-        <section>
-            <div class="footer-2">
-                <div class="instagram">
-                    <a href="https://www.instagram.com"><img src="IMG/instagram.png" alt="Link til Instagram"></a>
-                </div>
-
-                <div class="facebook">
-                    <a href="https://www.facebook.com"><img src="IMG/facebook.png" alt="Link til Facebook"></a>
-                </div>
-            </div>
-        </section>
+            <nav class="facebook">
+                <a href="https://www.facebook.com" target="_blank"><img src="IMG/facebook.png" alt="Link til Facebook"></a>
+            </nav>
+        </div>
     </footer>
 </body>
 </html>

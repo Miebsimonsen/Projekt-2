@@ -5,19 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog indlæg</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <script src="https://kit.fontawesome.com/1a99d09853.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-      <header>
-        <nav class="menu">
-            <p>Du er ikke alene ❤️‍🩹</p>
-         </nav> 
-         
-         <nav class="menu">
-            <a href="index.html">Forside</a>
-            <a href="blogindlæg.html">Blogindlæg</a>
-            <a href="kontakt.html">Kontakt</a>
-            <input type="search" placeholder=" 🔍    Søg">
+    <header>
+        <nav>
+            <p>
+                Du er ikke alene <span aria-hidden="true">❤️‍🩹</span>
+            </p>
+        
+            <button
+            id="bars"
+            aria-expanded="false"
+            aria-controls="menu"
+            aria-label="Åbn navigation">
+            <i class="fa-solid fa-bars"></i>
+            </button>
+    
+            <ul id="menu">
+                <li><a href="index.html">Forside</a></li>
+                <li><a class="active" href="blogindlæg.html" aria-current="page">Blogindlæg</a></li>
+                <li><a href="anbefalinger.html">Anbefalinger</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>  
+            </ul>
+            <label class="screen-reader-text" for="search">Søg</label>
+            <input id="search" type="search" placeholder=" 🔍  Søg">
         </nav>
     </header>
 
@@ -25,34 +39,50 @@
         <section> 
             <div class="blog-tekst">
                 <h1> Hvad er mental sundhed?</h1>
-            </div>
-            
-
-            <div class="blog">
-                <img src="IMG/mental health matters 12.35.57.png" alt="Billede af sommerfugle">
+                <img src="IMG/mental-health-matters.png" alt="Billede af sommerfugle">
             </div>
 
             <div class="blog-tekst">
                 <p>
-                   Mental sundhed kan kendetegnes af en tilstand, hvor man blandt andet har overskud til sociale relationer og til hverdagsopgaver. Hvis man oplever at have det dårligt mentalt, vil det modsatte gælde - hvor man ikke kan håndtere belastninger, trækker sig fra relationer og ikke kan fungere i sin dagligdag. (Hvad er mental sundhed? | Mental Sundhed n.d.)  
+                   Mental sundhed kan kendetegnes af en tilstand, hvor man blandt andet har overskud til sociale relationer og til hverdagsopgaver. Hvis man oplever at have det dårligt mentalt, vil det modsatte gælde - hvor man ikke kan håndtere belastninger, trækker sig fra relationer og ikke kan fungere i sin dagligdag. (Hvad er mental sundhed? | Mental Sundhed 2026)  
                 </p>
                 
                 <p>
-                    Vi lever i et samfund hvor mange mennesker er ramt af perioder af dårlig mental sundhed. Mere end hver femte unge mellem 16 og 29 oplevede mistrivsel i 2021. Antallet af unge med en psykiatrisk diagnose er steget omkring 40% i de seneste 10 år. Statistikkerne bliver ikke bedre hvis vi kun kigger på tallene for kvinder - her er mere end hver tredje unge kvinde ramt af mistrivsel. (Psykiatrifonden - Mistrivsel Eller Psykisk Sygdom? n.d.) Undersøgelserne peger altså på en tydelig forværring af unges mentale helbred. En af de faktorer som også kan påvirke det mentale helbred er sociale medier. 
+                    Vi lever i et samfund hvor mange mennesker er ramt af perioder af dårlig mental sundhed. Mere end hver femte unge mellem 16 og 29 oplevede mistrivsel i 2021. Antallet af unge med en psykiatrisk diagnose er steget omkring 40% i de seneste 10 år. Statistikkerne bliver ikke bedre hvis vi kun kigger på tallene for kvinder - her er mere end hver tredje unge kvinde ramt af mistrivsel. (Anna Mertz Poulsen et al. 2025) En anden undersøgelse blandt gymnasieelever fra 2019 viste, at 35% af drengene og 55% af pigerne følte sig stressede dagligt eller ugentligt.(Lene Kierkegaard et al. 2020) Undersøgelserne peger altså på en tydelig forværring af unges mentale helbred. 
+
+                    En vigtigt pointe at have med er at kvinder er overrepræsenteret i statistikkerne,hvilekt kan skyldes at mange mænd bliver mødt med en forventning om at de skal være stærke og undlade at vise sårbarhed. Maskulinitetsnormer har lært mænd at de skal klare sig selv, hvilket i værste tilfælde kan føre til alvorligt misbrug og selvmordsforsøg, før de søger hjælp. (Signe Korsgaard 2023)
                 </p>
                 
                 <p>
-                    Som ung er det naturligt at sammenligne sig meget med andre. Sociale medier er en stor del af de fleste unges hverdag og her kan man nemt komme til at sammenligne sit liv med andres.(Undersøgelse om unges forhold til kropsidealer på sociale medier | Sex & Samfund 2024) Udfordringen ved sociale medier er, at man kun ser en brøkdel af andres liv og det er som oftest de bedste udvalgte øjeblikke. Derfor kan man hurtigt komme til at føle sig forkert hvis ikke ens eget liv matcher det man ser online eller oplever hos ens omgangskreds. Netop dette er pointen med min blog - du skal vide at du ikke er alene uanset hvor du står lige nu. 
+                   Jeg kan selv huske, da jeg gik i gymnasiet, hvor jeg følte mig stresset. Jeg trivedes ikke i min hverdag, men følte mig meget alene i den følelse. Der var ikke nogen af mine venner eller klassekammerater der virkede til at at have det svært. den følelse havde lige indtil jeg turde at spørge ind til hvordan de andre havde det og at jeg syntes det var presset at skulle nå det hele. først der gik det op for mig at de andre havde det ligesom mig. jeg blev mere rolig, fordi jeg ikke længere følte mig alene. Det er vigtigt at vi kan spejle os i andre, da det at føle sig anderledes kan forstærke følelsen af at være alene i situationen. (Berger, Jensen, and Morville 2023) 
                 </p>
-             
+
+                <nav class="kilder">
+                    <p>
+                        Du kan læse mere om artiklerne på følgende links
+                    </p>
+                    <a href="https://mentalsundhed.dk/temaer/hvad-er-mental-sundhed" target="_blank">Hvad er mental sundhed?</a>
+                    <a href="https://psykiatrifonden.dk/files/media/document/Psykiatrifonden_rapport_feb_2025_mistrivsel_eller_psykisk_sygdom.pdf" target="_blank">Psykiatrifonden - Mistrivsel Eller Psykisk Sygdom?</a>
+                    <a href="https://www.sst.dk/media/ux5h3eg5/digital-mediebrug-blandt-boern-og-unge.pdf" target="_blank">Digital mediebrugs betydning for sociale relationer, fællesskaber og stress blandt børn og unge</a>
+                    <a href="https://bornsvilkar.dk/wp-content/uploads/2023/06/Unge-maend-i-mistrivsel-hvorfor-soeger-de-ikke-hjaelp_final9.pdf" target="_blank">Unge mænd i mistrivsel - hvorfor søger de ikke hjælp?</a>
+                    <a href="https://www.vive.dk/media/pure/4vl8o0ox/24416713" target="_blank">Ensomhed blandt unge</a>
+                     
+                </nav>
             </div>
+
 
             <div class="blog-tekst">
                 <h2>Min egen historie</h2>
                 <p>
                     Jeg har selv været ramt af flere forskellige psykiske sygdomme og ved hvor svært det er at stå i. Man kan føle sig helt alene i verden og nogle gange kan det virke som om man er den eneste der står i den situation. Det allervigtigste jeg tager med mig fra mine sygdomsforløb er at det ALTID bliver bedre og det er nødt til at tro på selv i de mørkeste stunder. Nogle gange tager det længere tid, end man kunne håbe på, men man er nødt til at blive ved. Det er den hårdeste kamp at vinde, men der er lys på den anden side. Du må aldrig være bange for eller for stolt til at bede om hjælp, det er det modigste du kan gøre - uanset om det er familie, venner eller professionelle. Mest af alt, håber jeg at dette kan give noget håb - både at vide at du ikke er alene, der er mange der kæmper med samme udfordringer som dig selv.
                 </p>
+            </div>
 
+            <div class="billede-sol">
+                <img src="IMG/the-sun-will-rise-again.png" alt="">
+            </div>
+            
+            <div class="blog-tekst">
                 <p>
                     Jeg håber at du kunne bruge mit opslag til noget positivt og går herfra med et lidt lettere hjerte. Alting tager tid, men ligesom man kan blive ramt af en fysisk skade og genoptræne sig tilbage til normalen, fungerer det på samme måde med psykiske udfordringer. Man ved aldrig, hvem der er ramt af mental udfordringer, så mød andre med lidt mere kærlighed. 
                 </p>  
@@ -62,43 +92,37 @@
                     Mie 
                 </p> 
 
-                <button class="knap">
+                <nav class="knap">
                     <a href="anbefalinger.html">Se mine anbefalinger her →</a>
-                </button>
-
+                </nav>
             </div>
-
         </section>    
     </main>
 
   <footer>
-        <section>
-            <div class="footer-1">
-                <div class="logo">
-                    <p>
-                        Du er ikke alene ❤️‍🩹
-                    </p> 
-                </div>
+        <div class="footer-1">
+            <div class="logo">
                 <p>
-                    👤 Mie Breindahl Simonsen
-                </p>
-                <p>
-                    💌 kontakt@duerikkealene.dk
-                </p>
+                    Du er ikke alene <span aria-hidden="true">❤️‍🩹</span>
+                </p> 
             </div>
-        </section>
+            <p>
+                👤 Mie Breindahl Simonsen
+            </p>
+            <p>
+                💌 kontakt@duerikkealene.dk
+            </p>
+        </div>
+            
+        <div class="footer-2">
+            <nav class="instagram">
+                <a href="https://www.instagram.com" target="_blank"><img src="IMG/instagram.png" alt="Link til Instagram"></a>
+            </nav>
 
-        <section>
-            <div class="footer-2">
-                <div class="instagram">
-                    <a href="https://www.instagram.com"><img src="IMG/instagram.png" alt="Link til Instagram"></a>
-                </div>
-
-                <div class="facebook">
-                    <a href="https://www.facebook.com"><img src="IMG/facebook.png" alt="Link til Facebook"></a>
-                </div>
-            </div>
-        </section>
+            <nav class="facebook">
+                <a href="https://www.facebook.com" target="_blank"><img src="IMG/facebook.png" alt="Link til Facebook"></a>
+            </nav>
+        </div>
     </footer>
 </body>
 </html>

@@ -18,6 +18,7 @@ h1, h2, h3, h4 {
     color: #570016;
     font-family: Georgia;
 }
+
 h1, h2, h3 {
     text-align: center;
     padding: 1rem;
@@ -54,85 +55,119 @@ img {
 }
 
 .logo {
+    display: block;
     font-weight: bold;
+    font-size: 2rem;
 }
 
 .knap {
     display: inline-block;
-    font-weight:400;
-    padding: 0.5rem 1.5rem;
     background-color: #570016;
     border: 2px solid #570016;
-    border-radius: 1rem;
-    transition: transform 0.2s ease;
+    border-radius: 1.5rem;
+    transition: scale 0.2s ease; 
+    cursor: pointer;
 }
 
 .knap a {
+    display: block;
+    padding: 0.75rem 1.5rem;
     background-color: transparent;
     color:#FAF6F1;
 }
 
 .knap:hover {
-    transform: scale(1.1);
+    scale: 1.08; /*kode fra https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/transform-function/scale*/
 }
 
+/*Kode fra https://www.a11y-collective.com/blog/skip-to-main-content/ */
+.screen-reader-text {
+  position: absolute; 
+  left: -9999px;
+  z-index: 999;
+  padding: 1em;
+  background-color: #570016;
+  color: #E9A8BE;
+  opacity: 0;
+}
+ 
+.screen-reader-text:focus {
+  left: 50%; 
+  transform: translateX(-50%); 
+  opacity: 1;
+}
 
 /*Header*/
 
-header {
+header nav #bars {
+    display: none;
+  }
+ 
+header nav {
+    position: relative;
+    background-color: #E9A8BE;
+    color: #570016;
+    height: 4em;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #E9A8BE;
-    padding: 3rem;
+    padding: 5rem;
 }
 
-.menu {
+header nav p {
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 0;
+}
+
+header nav ul {
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 2rem;
-    background-color: #E9A8BE;
-}
+    gap: 1rem;
+    list-style-type: none;
+  }
 
-.menu a {
-    background-color: #E9A8BE;
+header nav a {
+    padding: 0.5em;
+    margin: 0;
     font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
 }
 
-.menu a:hover {
+header nav a:hover {
     text-decoration: underline;
 }
 
-.menu p {
-    margin: 0;
-    padding: 0;
-    flex: 1;
-    font-size: 2.5rem;
-    font-weight: bold;
-    background-color: #E9A8BE;
+header nav input[type="search"] {
+    width: 20%;
+    margin-left: 1.5rem;
+    padding: 0.8rem;
+    border-radius: 1.5rem;
+    border: 5px solid #570016;
+    background-color: #FAF6F1;
+    color: #570016;
 }
 
-.menu input {
-    width: 30%;
-    padding: 0.5rem;
-    border-radius: 1rem;
-    border: 2px solid transparent;
-    background-color: #F8F5EF;
-}
-
-.menu input::placeholder {
+header nav input[type="search"]::placeholder {
     color: #570016;
     font-family: Georgia;
     font-size: 1rem;
 }
 
-.menu input:hover {
-    scale: 1.1;
+header nav input[type="search"]:hover {
+    scale: 1.08;
 }
 
-.menu input:focus {
+header nav input[type="search"]:focus {
     border-color: #570016;
     outline: none;
+}
+
+.active {
+    text-decoration: underline;
 }
 
 
@@ -154,90 +189,110 @@ header {
     margin: 2rem 4rem 4rem;
     padding: 2rem;
     font-family: Georgia;
-    text-align: center;
  }
 
- .blog-h2 h2 {
+ .hero p {
+    margin: 0 6rem 1.25rem;
+    padding: 0;
+    text-align: left;
+    line-height: 1.5;
+    font-size: 1.5rem;
+}
+
+.akut p{
+    font-weight: 600;
+    text-align: center;
+    margin: 1rem auto;
+    padding: 1.5rem;
+
+ }
+ 
+.hero-knapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+ }
+
+.blog-h2 h2 {
     background-color: #E9A8BE;
     padding: 2rem;
+    margin-top: 0.5rem;
  }
 
 .blog-billeder {
     display: flex;
     justify-content: center;
     padding: 2rem;
+    background-color: #E9A8BE;
 }
 
- .blog-kort {
+.blog-kort {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 0.25rem;
+    padding: 1rem;
 }
 
+.blog-kort p {
+    margin: 0 5rem 0;
+    padding: 0;
+}
 
 .blog-kort img {
     width: 30rem;
     height: 30rem;
-    border-radius: 2rem;
+    border-radius: 1rem;
     border: 0.5rem solid #570016;
 }
 
-
-.blog-kort, .blog-kort p, .blog-kort h3, .blog-billeder {
-    background-color: #E9A8BE;
-    padding: 0.5rem;
+.blog-kort .knap {
+    margin-top: 1rem;
 }
 
 .om-mig {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
     background-color: #A7C4E3;
-    margin: 5rem 4rem 5rem;
-    padding: 1.5rem;
-    border-radius: 4rem;
+    margin: 5rem 4rem;
+    border-radius: 2rem;
+    padding: 2rem;
 }
 
-.om-mig h4, .om-mig p {
-    background-color: #A7C4E3;
-}
-
-.om-mig p {
-    flex: 1; 
-    padding: 0.5rem;
-    margin: 0;
-}
-
-.portræt {
-    text-align: left;
-    padding: 3rem;
-    background-color: #A7C4E3;
-    max-width: 40%;
-}
-
-.portræt img {
+.om-mig img {
+    width: 40%;
     border-radius: 1rem;
 }
 
-.portræt h4 {
-    margin-bottom: 1rem;
+.om-mig-tekst {
+    flex: 1; /* element fylder pladsen på siden, kode fra https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/flex*/
+}
+
+.om-mig-tekst h4, .om-mig-tekst p {
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.om-mig-tekst p {
+    margin-top: 1rem;
 }
 
 
 /* Blogindlæg - Hvad er mental sundhed?*/
 
-.blog {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 8rem 0;
+.blog-tekst h1, .blog-tekst h2 {
+    margin: 3rem 0;
 }
 
-.blog img{
-    width: 90%;
-    padding-top: 2rem;
+.blog-tekst img{
+    width: 60%;
+    border: 0.5rem solid #570016;
 }
 
 .blog-tekst {
@@ -245,6 +300,48 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.blog-tekst p {
+    margin: 2rem 12rem;
+}
+
+.blog-tekst .kilder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 1rem 2rem;
+    margin: 2rem 0;
+    background-color: #E9A8BE;
+}
+
+.blog-tekst .kilder p,
+.blog-tekst .kilder a {
+    text-align: left;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.blog-tekst .kilder p {
+    margin: 1rem 0;
+}
+
+.blog-tekst .kilder a {
+    margin: 0.5rem 0;
+    padding: 0.75rem 1rem;
+    text-decoration: underline;
+}
+
+
+.billede-sol {
+    display: flex;
+    justify-content: center;
+}
+
+.billede-sol img {
+    max-width: 50%;
+    border: 0.5rem solid #570016;
 }
 
 .blog-tekst .knap {
@@ -284,6 +381,10 @@ header {
     border: 0.5rem solid #570016;
 }
 
+.recommendations-kort a, .help-kort a {
+    display: block;
+}
+
 .recommendations-kort p, .help-kort p {
     width: 100%;
     margin: 0;
@@ -292,7 +393,7 @@ header {
 }
 
 .a1:hover, .a2:hover, .a3:hover, .a4:hover, .b1:hover, .b2:hover, .b3:hover, .b4:hover {
-   transform: scale(1.1);
+    scale: 1.08;
 }
 
 /*Kontakt*/
@@ -300,37 +401,61 @@ header {
 .info {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    min-width: 100%;
+    justify-content: center;
+    max-width: 60%;
     padding: 1rem;
-    margin: 1rem 0 1rem;
+    margin: 1rem auto;
     text-align: left;
     background-color: #E9A8BE;
-    border-radius: 3rem;
+    border-radius: 2rem;
 }
 
 .info h2 {
     text-align: left;
-    background-color: #E9A8BE;
 }
 
 .info p {
     margin: 0;
-    padding: 0.2rem;
-    background-color: #E9A8BE;
+    padding: 0.5rem;
+    font-weight: 600;
 }
 
-.besked {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    margin: 5rem 2rem 5rem;
-    padding: 2rem;
-    width: 100%;
-    text-align: left;
+.kontakt {
+    border-radius: 2rem;
+    border-color: #570016;
+    background-color: #A7C4E3;
+    color: #570016;
+    padding: 1.3em;
+    width: 60%;
+    margin: 2rem auto 4rem; /* centrerer tekst kode fra https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/margin*/
+    font-weight: 600;
+    font-size: 1.5rem;
 }
+
+input[type=text], input[type=email], textarea {
+	width: 100%;
+	padding: 1em;
+	border: 1px solid #570016;
+	border-radius: 0.5rem;
+	margin-top: 0.5em;
+	margin-bottom: 1em;
+    font-size: 1.5rem;
+}
+
+input[type=submit] {
+	background-color: #570016;
+	color: #FAF6F1;
+	padding: 1rem 1.5rem;
+	border: none;
+	border-radius: 2rem;
+	width: 100%;
+	font-size: 1rem;
+
+}
+input[type=submit]:hover {
+	background-color: #6e3c49;
+}
+
 
 /*Footer*/
 footer {
@@ -346,14 +471,14 @@ footer a {
     font-size: 1rem;
 }
 
-.footer-1, .footer-2, footer p, footer a, footer img {
-    background-color: #E9A8BE;
-}
-
 footer p {
     margin: 0;
     padding: 0.5rem;
     font-size: 1.5rem;
+}
+
+.footer-1 {
+    font-style: normal;
 }
 
 .footer-2 {
@@ -363,32 +488,92 @@ footer p {
     gap: 1rem;
 }
 
-.instagram{
+.footer-2 nav, .footer-2 a {
+    margin: 0;
+    padding: 0;
+}
+
+.instagram, .facebook{
     width: 4rem;
     height: 4rem;
 }
-.facebook {
-    width: 5rem;
-    height: 5rem;
-}
 
 .instagram:hover, .facebook:hover{
-   transform: scale(1.1);
+    scale: 1.1;
 }
 
 
-/* Desktop version */
+/* Version til tablet/mobil */
 
 @media screen and (max-width:769px ){
-    header {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
+
+    header nav {
+        min-height: 10rem;
+        padding: 1rem;
+    }
+
+    header nav #bars {
+      display: flex;
+      margin-left: auto;
+      border: none;
+      background-color: transparent;
+      font-size: 2.3em;
+      color: #570016;
+    }
+
+    header nav ul {
+      display: none;
+      height: auto;
+      border-top: 4px solid #E9A8BE;
+      flex-direction: column;
+    }
+
+    header nav ul li {
+      display: flex;
+    }
+    
+    header nav .show {
+      display: flex;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      padding: 0;
+      padding-bottom: 1rem;
+      background-color: #570016;
+      width: 100%;
+      z-index: 1;
+    }
+
+    header nav .show a {
+      color: #E9A8BE;
+    }
+
+    header nav p {
+        font-size: 1.8rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    header nav input[type="search"] {
+        width: 25%;
+        margin-left: 0.75rem;
+        padding: 0.6rem;
+        font-size: 1.5rem;
+        border-radius: 2rem;
+        text-align: center;
+    }
+
+    .hero {
+        margin: 1rem;
+        padding: 1rem;
     }
 
     .hero-billede {
-        margin-bottom: 0;
+        margin: 1rem 0;
+    }
+
+    .hero-billede img {
+        min-width: 100%;
     }
 
     .hero h1{
@@ -396,16 +581,17 @@ footer p {
     }
 
     .hero p {
-        margin: 0;
-        margin-bottom: 0;
+       margin: 0 2rem 1rem;
+       font-size: 1.2rem;
     }
 
-    .blog-kort h3{
-        padding: 1rem;
+    .hero-knapper {
+        gap: 1rem;
     }
 
-    .blog-kort h {
-        padding: ;
+    .blog-kort img {
+        width: 20rem;
+        height: 20rem;
     }
 
     .blog-billeder {
@@ -419,21 +605,56 @@ footer p {
 
     .om-mig {
         flex-direction: column;
-        text-align: center;
+        align-items: center;
+        margin: 4rem 2rem;
     }
 
-    .portræt{
-        min-width: 110%;
-        background-color: transparent;
-        padding-bottom: 0;
+    .om-mig img {
+        width: 100%;
     }
 
-    .blog {
-        margin: 0;
+    .om-mig-tekst {
+        width: 100%;
     }
 
     .blog-tekst h1, .blog-tekst h2 {
         font-size: 2.5rem;
+    }
+
+    .blog-tekst {
+        margin: 0;
+    }
+
+    .blog-tekst p {
+        margin: 1rem 3.5rem;
+    }
+
+    .blog-tekst .kilder {
+        margin: 0 0 1rem;
+        padding: 0.5rem 0.75rem;
+    }
+
+    .blog-tekst .kilder p {
+        margin: 0.5rem 0;
+    }
+
+    .blog-tekst .kilder a {
+        margin: 0.25rem 0;
+        padding: 0.25rem 0.5rem;
+    }
+
+    .blog-tekst .kilder p,
+    .blog-tekst .kilder a {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    .blog-tekst h2 {
+        margin: 0;
+    }
+
+    .billede-sol img {
+        max-width: 80%;
     }
 
     .recommendations-kort, .help-kort {
@@ -443,6 +664,14 @@ footer p {
 
     .anbefalinger, .hjælp {
         margin: 0 2rem 0;
+    }
+
+    .info, .kontakt {
+        width: 80%;
+    }
+
+    .info {
+        max-width: none;
     }
 
     footer {
