@@ -585,17 +585,18 @@ footer p {
     }
 
     .hero {
-        margin: 1rem;
-        padding: 1rem;
+        margin: 1rem 0;
+        padding: 1rem 0;
     }
 
     .hero-billede {
+        width: 100%;
         margin: 0 0 1rem;
         border: 0.5rem solid #570016;
     }
 
     .hero-billede img {
-        min-width: 100%;
+        width: 100%;
     }
 
     .hero h1{
@@ -618,7 +619,7 @@ footer p {
 
     .blog-billeder {
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 0.25rem;
         padding: 0 1rem 1rem;
     }
 
@@ -627,7 +628,7 @@ footer p {
     }
 
     .blog-kort {
-        padding: 0.5rem;
+        padding: 0.25rem;
     }
 
     .blog-billeder p {
