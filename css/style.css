@@ -55,9 +55,7 @@ img {
 }
 
 .logo {
-    display: block;
     font-weight: bold;
-    font-size: 2rem;
 }
 
 .knap {
@@ -117,7 +115,6 @@ header nav {
 header nav p {
     font-size: 2.2rem;
     font-weight: bold;
-    text-decoration: none;
     margin-left: 0;
 }
 
@@ -415,7 +412,6 @@ header nav input[type="search"]:focus {
 .info {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     max-width: 60%;
     padding: 1rem;
     margin: 1rem auto;
@@ -436,7 +432,6 @@ header nav input[type="search"]:focus {
 
 .kontakt {
     border-radius: 2rem;
-    border-color: #570016;
     background-color: #A7C4E3;
     color: #570016;
     padding: 1.3em;
@@ -489,10 +484,6 @@ footer p {
     margin: 0;
     padding: 0.5rem;
     font-size: 1.5rem;
-}
-
-.footer-1 {
-    font-style: normal;
 }
 
 .footer-2 {
@@ -599,7 +590,7 @@ footer p {
     }
 
     .hero-billede {
-        margin: 0;
+        margin: 0 0 1rem;
         border: 0.5rem solid #570016;
     }
 
@@ -627,7 +618,16 @@ footer p {
 
     .blog-billeder {
         flex-direction: column;
-        gap: 2rem;
+        gap: 0.5rem;
+        padding: 0 1rem 1rem;
+    }
+
+    .blog-h2 h2 {
+        padding: 1rem;
+    }
+
+    .blog-kort {
+        padding: 0.5rem;
     }
 
     .blog-billeder p {
@@ -650,6 +650,10 @@ footer p {
 
     .blog-tekst h1, .blog-tekst h2 {
         font-size: 2.5rem;
+    }
+
+    .blog-tekst h1 {
+        margin: 1rem 0 0.5rem;
     }
 
     main h1 {
@@ -689,8 +693,13 @@ footer p {
         margin: 0;
     }
 
-    .billede-sol img, .billede-mental img {
+    .billede-mental img {
         width: 100%;
+    }
+
+    .billede-sol img {
+        width: 100%;
+        max-width: 100%;
     }
 
     .recommendations-kort, .help-kort {
