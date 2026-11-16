@@ -620,7 +620,7 @@ footer p {
 
     .blog-billeder {
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 1rem;
         padding: 0 1rem 1rem;
     }
 
